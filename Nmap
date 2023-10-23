@@ -1,0 +1,9 @@
+import nmap
+
+nmScanner = nmap.PortScanner()
+
+ip = "10.8.2.62"
+nmScanner.scan(hosts=ip, argyments="--top-ports 100 -sV --version-intensity 3")
+print("Command Executed: {}".format(nmScanner.command_line()))
+print(nmScanner.scaninfo())
+
